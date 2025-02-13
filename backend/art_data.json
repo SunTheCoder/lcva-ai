@@ -8,7 +8,7 @@
   },
   {
     "title": "The Scream",
-    "artist": "Edvard Munch",
+    "artist": "Edvard Munch", 
     "description": "An agonized figure against a landscape with a tumultuous orange sky",
     "mood": ["anxiety", "fear", "distress", "intense"],
     "image_url": "https://example.com/the-scream.jpg"
@@ -61,5 +61,47 @@
     "description": "Harsh interior of a café with clashing colors expressing tension",
     "mood": ["angry", "tense", "uncomfortable", "agitated"],
     "image_url": "https://example.com/night-cafe.jpg"
+  },
+  {
+    "title": "Girl with a Pearl Earring",
+    "artist": "Johannes Vermeer",
+    "description": "Intimate portrait of a young woman glancing over her shoulder with an enigmatic expression",
+    "mood": ["mysterious", "serene", "intimate", "graceful"],
+    "image_url": "https://example.com/girl-pearl-earring.jpg"
+  },
+  {
+    "title": "The Kiss",
+    "artist": "Gustav Klimt",
+    "description": "Ornate golden painting of two lovers embracing",
+    "mood": ["romantic", "passionate", "intimate", "luxurious"],
+    "image_url": "https://example.com/the-kiss.jpg"
+  },
+  {
+    "title": "The Garden of Earthly Delights",
+    "artist": "Hieronymus Bosch",
+    "description": "Complex triptych depicting paradise, earthly pleasures, and hell",
+    "mood": ["chaotic", "fantastical", "bizarre", "overwhelming"],
+    "image_url": "https://example.com/garden-earthly-delights.jpg"
+  },
+  {
+    "title": "The Birth of Venus",
+    "artist": "Sandro Botticelli",
+    "description": "Venus emerging from the sea on a giant shell",
+    "mood": ["graceful", "divine", "beautiful", "serene"],
+    "image_url": "https://example.com/birth-of-venus.jpg"
+  },
+  {
+    "title": "Impression, Sunrise",
+    "artist": "Claude Monet",
+    "description": "Hazy harbor scene with orange sun reflecting on water",
+    "mood": ["peaceful", "atmospheric", "tranquil", "misty"],
+    "image_url": "https://example.com/impression-sunrise.jpg"
+  },
+  {
+    "title": "The Great Wave off Kanagawa",
+    "artist": "Katsushika Hokusai",
+    "description": "Dramatic wave threatening boats with Mount Fuji in background",
+    "mood": ["powerful", "dramatic", "awe-inspiring", "dynamic"],
+    "image_url": "https://example.com/great-wave.jpg"
   }
-] 
+]
