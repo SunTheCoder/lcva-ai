@@ -17,7 +17,7 @@ llm = OpenAI(temperature=0.7)
 
 # Create prompt template
 art_prompt = PromptTemplate(
-    input_variables=["emotion", "art_data"],
+    input_variables=["emotion", "./art_data.json"],
     template="""
     You are an empathetic art recommendation assistant. Based on the user's situation and emotions, recommend artworks that resonate with their current state of mind or might help them process their feelings.
     
@@ -42,7 +42,7 @@ art_prompt = PromptTemplate(
 
 def recommend_art(emotion):
     # Load art data
-    art_data = load_art_data("../art_data.json")
+    art_data = load_art_data("./art_data.json")
     
     # Initialize OpenAI with higher max_tokens
     llm = OpenAI(
