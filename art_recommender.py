@@ -42,7 +42,13 @@ art_prompt = PromptTemplate(
 
 def recommend_art(emotion):
     # Load art data
-    art_data = load_art_data("art_data.json")
+    art_data = load_art_data("../art_data.json")
+    
+    # Initialize OpenAI with higher max_tokens
+    llm = OpenAI(
+        temperature=0.7,
+        max_tokens=2000  # Increased from default
+    )
     
     # Create and invoke the chain using the newer pipe syntax
     chain = art_prompt | llm
@@ -55,17 +61,26 @@ def recommend_art(emotion):
     
     return response
 
+# Modify the main block to handle API requests
 if __name__ == "__main__":
-    while True:
-        # Get user input
-        user_emotion = input("\nHow are you feeling? (or type 'quit' to exit): ")
+    try:
+        # Read input from stdin
+        emotion = input().strip()
         
-        if user_emotion.lower() == 'quit':
-            break
-            
-        try:
-            # Get and print recommendation
-            print("\nHere are some artworks that match your mood:\n")
-            print(recommend_art(user_emotion))
-        except Exception as e:
-            print(f"An error occurred: {e}")
+        # Get recommendation
+        result = recommend_art(emotion)
+        
+        # Print the response in a way that ensures complete output
+        import sys
+        json.dump({
+            "success": True,
+            "result": result
+        }, sys.stdout, ensure_ascii=False)
+        sys.stdout.flush()
+        
+    except Exception as e:
+        json.dump({
+            "success": False,
+            "error": str(e)
+        }, sys.stdout)
+        sys.stdout.flush()
