@@ -1,47 +1,51 @@
 # Art Emotion Recommender
 
-An AI-powered art recommendation system that suggests artworks based on emotions and situations using LangChain and OpenAI.
+An AI-powered web application that suggests artworks based on emotions and situations using LangChain and OpenAI. The system provides personalized art recommendations that resonate with your current emotional state.
 
 ## Overview
 
 This project creates an intelligent art recommendation system that:
 - Takes user input about their emotional state or situation
-- Analyzes the emotional context
+- Analyzes the emotional context using AI
 - Recommends relevant artworks from a curated collection
 - Provides explanations for why each artwork matches their current state
 
 ## Features
 
-- Natural language input processing
-- Context-aware emotional analysis
-- Personalized art recommendations
-- Detailed explanations for each recommendation
-- Support for both direct emotions and situational context
+- 🎨 AI-powered art recommendations based on emotional input
+- 🤖 LangChain + OpenAI for natural language processing
+- ⚡ Real-time recommendations with loading states
+- 🌐 Modern tech stack: Next.js + FastAPI
+- ♿ Accessibility with ARIA labels
+- 🎯 Responsive, minimalist design
 
-## Usage
+## Tech Stack
 
-Enter your emotional state or situation when prompted. For example:
+### Frontend
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Loading skeletons for better UX
 
-- "I'm feeling peaceful and calm"
-- "I had a stressful day at work"
-- "I'm celebrating good news"
-- "I'm feeling anxious about an upcoming presentation"
-
-Type 'quit' to exit the program.
+### Backend
+- FastAPI + Uvicorn
+- LangChain for AI orchestration
+- OpenAI API integration
+- Python dotenv for configuration
 
 ## How It Works
 
-1. **Input Processing**: The system takes natural language input describing your emotional state or situation.
+1. **Input Processing**: Enter your emotional state or situation (e.g., "I'm feeling peaceful", "I had a stressful day")
 
 2. **Emotional Analysis**: Using LangChain and OpenAI, the system analyzes the input to identify core emotions and context.
 
-3. **Art Matching**: The system searches through a curated collection of artworks, each tagged with emotional attributes and descriptions.
+3. **Art Matching**: The system searches through a curated collection of artworks, each tagged with emotional attributes.
 
-4. **Recommendation Generation**: Based on the emotional analysis, the system recommends up to 3 artworks that either:
+4. **Recommendation Generation**: You'll receive up to 3 artworks that either:
    - Match and validate your current emotional state
    - Offer a contrasting perspective that might help shift your mood
 
-5. **Explanation**: For each recommendation, the system provides a detailed explanation of why the artwork was chosen and how it relates to your current state.
+5. **Explanation**: Each recommendation includes a detailed explanation of why the artwork was chosen.
 
 ## Art Collection
 
@@ -53,15 +57,4 @@ The system includes a curated collection of famous artworks with emotional attri
 - Sunflowers (Vincent van Gogh)
 - And more...
 
-## Contributing
 
-Contributions are welcome! You can help by:
-- Adding more artworks to the collection
-- Improving emotional analysis
-- Enhancing the recommendation algorithm
-- Adding new features
-
-## Acknowledgments
-
-- LangChain for the AI framework
-- OpenAI for the language model
