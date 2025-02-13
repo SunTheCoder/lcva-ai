@@ -1,7 +1,4 @@
 import { NextResponse } from 'next/server';
-import { spawn } from 'child_process';
-import { resolve } from 'path';
-import { existsSync } from 'fs';
 
 const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
 
@@ -18,7 +15,7 @@ export async function POST(request: Request) {
     const data = await response.json();
     
     return NextResponse.json(data);
-  } catch (error) {
+  } catch { 
     return NextResponse.json(
       { success: false, error: 'Failed to get recommendations' },
       { status: 500 }
