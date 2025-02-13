@@ -13,7 +13,10 @@ def load_art_data(file_path):
         return json.load(file)
 
 # Initialize OpenAI LLM
-llm = OpenAI(temperature=0.7)
+llm = OpenAI(
+    temperature=0.7,
+    max_tokens=2000  # Keep this configuration
+)
 
 # Create prompt template
 art_prompt = PromptTemplate(
@@ -41,14 +44,8 @@ art_prompt = PromptTemplate(
 )
 
 def recommend_art(emotion):
-    # Load art data
+    # Load art data from the same directory
     art_data = load_art_data("art_data.json")
-    
-    # Initialize OpenAI with higher max_tokens
-    llm = OpenAI(
-        temperature=0.7,
-        max_tokens=2000  # Increased from default
-    )
     
     # Create and invoke the chain using the newer pipe syntax
     chain = art_prompt | llm
