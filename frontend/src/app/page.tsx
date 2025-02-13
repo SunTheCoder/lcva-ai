@@ -2,13 +2,13 @@
 
 import { useState } from 'react';
 
-interface Artwork {
-  title: string;
-  artist: string;
-  description: string;
-  mood: string[];
-  image_url: string;
-}
+// interface Artwork {
+//   title: string;
+//   artist: string;
+//   description: string;
+//   mood: string[];
+//   image_url: string;
+// }
 
 export default function Home() {
   const [emotion, setEmotion] = useState('');

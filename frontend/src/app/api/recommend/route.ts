@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     console.log('Python script path:', pythonScript);
     console.log('File exists:', existsSync(pythonScript));
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       // Use python3 if available, fallback to python
       const python = spawn('python3', [pythonScript]);
       let outputData = '';
@@ -51,7 +51,7 @@ export async function POST(request: Request) {
           // Ensure we have complete JSON
           const result = JSON.parse(outputData);
           resolve(NextResponse.json(result));
-        } catch (error) {
+        } catch (_) {
           console.error('Failed to parse Python output:', outputData);
           resolve(NextResponse.json({
             success: false,
