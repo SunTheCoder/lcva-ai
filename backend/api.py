@@ -9,8 +9,18 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://sunthecoder.com",
         "https://lcva-ai.vercel.app",
-        "http://localhost:3000"
+        "https://next-vercel-kv-demo.vercel.app",
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "http://localhost:3002",
+        "http://localhost:3003",
+        "http://localhost:3004",
+        "http://localhost:3005",
+        "http://localhost:3006",
+        "http://localhost:3007",
+        "http://localhost:3008",
     ],
     allow_methods=["*"],
     allow_headers=["*"],
